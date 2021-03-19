@@ -79,7 +79,7 @@ class FibonacciRetracement(TechnicalIndicator):
                             columns=['rl_' + str(round(100*i, 1)) for i in
                                      levels_multipliers]).round(4)
 
-    def getTiSignal(self):
+    def _getTiSignal(self):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.

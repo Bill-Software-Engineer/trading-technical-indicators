@@ -129,7 +129,7 @@ class RelativeStrengthIndex(TechnicalIndicator):
 
         return rsi.astype('float64').round(4)
 
-    def getTiSignal(self):
+    def _getTiSignal(self):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.

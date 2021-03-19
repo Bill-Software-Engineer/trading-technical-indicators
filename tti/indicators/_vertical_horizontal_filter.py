@@ -108,7 +108,7 @@ class VerticalHorizontalFilter(TechnicalIndicator):
 
         return vhf[['vhf']].round(4)
 
-    def getTiSignal(self):
+    def _getTiSignal(self):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.
@@ -131,7 +131,7 @@ class VerticalHorizontalFilter(TechnicalIndicator):
                 return TRADE_SIGNALS['hold']
             else:
                 return DoubleExponentialMovingAverage(
-                    self._input_data, period=5).getTiSignal()
+                    self._input_data, period=5)._getTiSignal()
 
         # Falling values indicate a ranging market
         if (self._ti_data['vhf'].iat[-3] > self._ti_data['vhf'].iat[-2] >
@@ -141,6 +141,6 @@ class VerticalHorizontalFilter(TechnicalIndicator):
             if len(self._input_data.index) < 12:
                 return TRADE_SIGNALS['hold']
             else:
-                return Momentum(self._input_data, period=12).getTiSignal()
+                return Momentum(self._input_data, period=12)._getTiSignal()
 
         return TRADE_SIGNALS['hold']

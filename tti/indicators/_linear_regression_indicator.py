@@ -101,7 +101,7 @@ class LinearRegressionIndicator(TechnicalIndicator):
 
         return lri
 
-    def getTiSignal(self):
+    def _getTiSignal(self):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.

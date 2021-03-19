@@ -68,7 +68,7 @@ class AccumulationDistributionLine(TechnicalIndicator):
 
         return adl.astype(dtype='int64', errors='ignore')
 
-    def getTiSignal(self):
+    def _getTiSignal(self):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.
