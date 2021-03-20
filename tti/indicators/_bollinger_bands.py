@@ -115,7 +115,7 @@ class BollingerBands(TechnicalIndicator):
 
         return bb
 
-    def _getTiSignal(self):
+    def getTiSignal(self):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.

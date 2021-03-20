@@ -105,7 +105,7 @@ class TechnicalIndicator(ABC):
         raise NotImplementedError
 
     @abstractmethod
-    def _getTiSignal(self):
+    def getTiSignal(self):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.
@@ -120,11 +120,10 @@ class TechnicalIndicator(ABC):
 
         raise NotImplementedError
 
-    def getTiSignal(self, date=None):
+    def getTiSignalWithDate(self, date):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.
-
         Args:
             date (str, default=None): A date string, in the same format as the
                 format of the ``input_data`` index.

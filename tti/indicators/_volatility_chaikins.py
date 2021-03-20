@@ -117,7 +117,7 @@ class VolatilityChaikins(TechnicalIndicator):
 
         return vch[['vch']].round(4)
 
-    def _getTiSignal(self):
+    def getTiSignal(self):
         """
         Calculates and returns the trading signal for the calculated technical
         indicator.
