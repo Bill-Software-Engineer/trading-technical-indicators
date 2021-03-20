@@ -136,7 +136,7 @@ class TechnicalIndicator(ABC):
             NotImplementedError: Abstract method not implemented.
         """
         if date is None:
-            return self._getTiSignal()
+            return self.getTiSignal()
         else:
             # Hack: Trick implementing classes into thinking there is only data up to [:date].
             date = pd.to_datetime(date)
@@ -144,7 +144,7 @@ class TechnicalIndicator(ABC):
             # We create a temporary view into the data with a subset of the dates:
             self._input_data, self._ti_data = all_input_data[:date], all_ti_data[:date]
             # assert self._input_data._is_view and self._ti_data._is_view
-            ret_val = self._getTiSignal()
+            ret_val = self.getTiSignal()
             self._input_data, self._ti_data = all_input_data, all_ti_data
             return ret_val
 
