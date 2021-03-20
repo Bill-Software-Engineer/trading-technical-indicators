@@ -120,6 +120,34 @@ class TechnicalIndicator(ABC):
 
         raise NotImplementedError
 
+    def getTiSignalWithDate(self, date):
+        """
+        Calculates and returns the trading signal for the calculated technical
+        indicator.
+        Args:
+            date (str, default=None): A date string, in the same format as the
+                format of the ``input_data`` index.
+
+        Returns:
+            {('hold', 0), ('buy', -1), ('sell', 1)}: The calculated trading
+            signal.
+
+        Raises:
+            NotImplementedError: Abstract method not implemented.
+        """
+        if date is None:
+            return self.getTiSignal()
+        else:
+            # Hack: Trick implementing classes into thinking there is only data up to [:date].
+            date = pd.to_datetime(date)
+            all_input_data, all_ti_data = self._input_data, self._ti_data
+            # We create a temporary view into the data with a subset of the dates:
+            self._input_data, self._ti_data = all_input_data[:date], all_ti_data[:date]
+            # assert self._input_data._is_view and self._ti_data._is_view
+            ret_val = self.getTiSignal()
+            self._input_data, self._ti_data = all_input_data, all_ti_data
+            return ret_val
+
     def getTiData(self):
         """
         Returns the Technical Indicator values for the whole period.
