@@ -5,6 +5,7 @@ Trading Technical Indicators (tti) package API
    :maxdepth: 4
 
    tti.indicators
+   tti.ml
    tti.utils
 
 .. automodule:: tti

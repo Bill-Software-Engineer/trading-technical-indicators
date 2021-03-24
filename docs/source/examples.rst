@@ -6,4 +6,5 @@ Trading Technical Indicators (tti) usage examples
    :caption: Contents:
 
    tti_indicators_examples
+   tti_ml_examples
    tti_utils_examples

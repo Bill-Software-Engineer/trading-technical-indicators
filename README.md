@@ -43,7 +43,7 @@ API documentation and installation instructions can be found in the project's we
 - Fibonacci Retracement
 - Forecast Oscillator
 - Ichimoku Cloud
-- Intraday Movement Index
+- Intraday Momentum Index
 - Klinger Oscillator
 - Linear Regression Indicator
 - Linear Regression Slope

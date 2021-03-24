@@ -55,8 +55,7 @@ def execute_simulation(indicator_object, close_values, **kwargs):
           'seconds.')
 
     # Show graph for the calculated indicator
-    #graph.show()
-    graph.savefig('foo.png')
+    graph.show()
 
     # Get simulation statistics
     print('\n- Simulation Statistics:')

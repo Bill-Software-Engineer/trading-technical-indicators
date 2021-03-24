@@ -20,7 +20,7 @@ from ._envelopes import Envelopes
 from ._fibonacci_retracement import FibonacciRetracement
 from ._forecast_oscillator import ForecastOscillator
 from ._ichimoku_cloud import IchimokuCloud
-from ._intraday_movement_index import IntradayMovementIndex
+from ._intraday_momentum_index import IntradayMomentumIndex
 from ._klinger_oscillator import KlingerOscillator
 from ._linear_regression_indicator import LinearRegressionIndicator
 from ._linear_regression_slope import LinearRegressionSlope
@@ -72,7 +72,7 @@ __all__ = ['AccumulationDistributionLine', 'AverageTrueRange',
            'DetrendedPriceOscillator', 'DirectionalMovementIndex',
            'DoubleExponentialMovingAverage', 'EaseOfMovement', 'Envelopes',
            'FibonacciRetracement', 'ForecastOscillator', 'IchimokuCloud',
-           'IntradayMovementIndex', 'KlingerOscillator',
+           'IntradayMomentumIndex', 'KlingerOscillator',
            'LinearRegressionIndicator', 'LinearRegressionSlope',
            'MarketFacilitationIndex', 'MassIndex', 'MedianPrice', 'Momentum',
            'MovingAverage', 'MovingAverageConvergenceDivergence',

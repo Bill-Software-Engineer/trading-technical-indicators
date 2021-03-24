@@ -8,14 +8,15 @@ indicators from stocks data. The library provides an API for:
 * trading technical indicators graph preparation
 * trading signal calculation
 * trading simulation based on trading signals
-* prices direction prediction based on machine learning algorithms (not included in this release)
+* prices direction prediction based on machine learning algorithms
 
 Project site is https://www.trading-technical-indicators.org/
 """
 
 from tti import indicators
 from tti import utils
+from tti import ml
 
-__version__ = '0.2.2'
+__version__ = '1.0.0'
 
-__all__ = ['indicators', 'utils']
+__all__ = ['indicators', 'utils', 'ml']

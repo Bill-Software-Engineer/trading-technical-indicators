@@ -14,8 +14,7 @@ import copy
 import numpy as np
 
 from tti.utils.exceptions import NotEnoughInputData, \
-    WrongTypeForInputParameter, WrongValueForInputParameter, \
-    TtiPackageDeprecatedMethod
+    WrongTypeForInputParameter, WrongValueForInputParameter
 
 
 class TestIndicatorsCommon(ABC):
@@ -326,15 +325,6 @@ class TestIndicatorsCommon(ABC):
             self.indicator(df.iloc[:self.indicator_minimum_required_data],
                            **self.indicator_input_arguments).getTiSignal(),
             [('buy', -1), ('hold', 0), ('sell', 1)])
-
-    def test_simulation_deprecated(self):
-        df = pd.read_csv('./data/sample_data.csv', parse_dates=True,
-                         index_col=0)
-
-        with self.assertRaises(TtiPackageDeprecatedMethod):
-            self.indicator(df[df.index >= '2011-09-12'],
-                           **self.indicator_input_arguments).runSimulation(
-                close_values=df[df.index >= '2011-09-12'])
 
     def test_getTiSimulation(self):
 

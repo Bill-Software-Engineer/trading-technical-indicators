@@ -1,3 +1,3 @@
-Ran 1959 tests in 393.060s
+Ran 1620 tests in 508.938s
 
 OK

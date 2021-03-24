@@ -183,8 +183,8 @@ INDICATORS_PROPERTIES = \
                      'y2': [0, 'ti_data', 'senkou_b'],
                      'color': 'lightblue'}],
     "graph_subplots": False
-    }, "IntradayMovementIndex":
-   {"long_name": "Intraday Movement Index",
+    }, "IntradayMomentumIndex":
+   {"long_name": "Intraday Momentum Index",
     "short_name": "IMI",
     "required_input_data": ["open", "close"],
     "graph_input_columns": ["close"],
